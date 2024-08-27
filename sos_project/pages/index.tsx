@@ -51,7 +51,7 @@ export const blogs: BlogType[] = [
 const HomePage = () => {
   return (
     <div className="w-full">
-      <div className="w-full grid grid-cols-4 gap-6 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
+      <div className="w-full grid grid-cols-4 gap-2 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
         {blogs.map((blogItem, index) => (
           <BlogItem key={index} blog={blogItem} />
         ))}

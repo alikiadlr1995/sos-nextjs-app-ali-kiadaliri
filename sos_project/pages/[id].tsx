@@ -5,6 +5,7 @@ import { blogs } from ".";
 const BlogItem = () => {
   const router = useRouter();
   const id = router.query.id || 0;
+  
 
   // fetch simulation
   const blog = blogs[Number(id)];
