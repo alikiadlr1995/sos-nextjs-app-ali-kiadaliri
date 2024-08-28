@@ -12,6 +12,7 @@ const TodoList: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [inputValue, setInputValue] = useState<string>('');
 
+
   const addTodo = () => {
     if (inputValue.trim()) {
       const newTodo: Todo = {

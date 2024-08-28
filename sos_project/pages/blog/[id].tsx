@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { blogs } from ".";
+import { blogs } from "..";
+
 
 const BlogItem = () => {
   const router = useRouter();

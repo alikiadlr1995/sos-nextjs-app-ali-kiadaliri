@@ -15,7 +15,7 @@ const BlogItem = ({ blog }: BlogItemProps) => {
       <span className="text-2xl font-bold">{blog.title}</span>
       <span>5 دقیقه</span>
       <span className="text-lg font-medium">{blog.text}</span>
-      <button onClick={() => router.push(`blog/${blog.id}`)}>جزییات</button>
+      <button onClick={() => router.push(`/blog/${blog.id}`)}>جزییات</button>
     </div>
   );
 };
