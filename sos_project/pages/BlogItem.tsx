@@ -10,7 +10,7 @@ interface BlogItemProps {
 const BlogItem = ({ blog }: BlogItemProps) => {
   const router = useRouter();
   return (
-    <div className="w-full flex flex-col p-4 border border-gray-700 rounded-sm">
+    <div className="w-full flex flex-col p-4 border-[1px] border-sky-700 rounded-lg">
       <Image src={blog.image} alt={blog.text} className="w-full h-[100px]" />
       <span className="text-2xl font-bold">{blog.title}</span>
       <span>5 دقیقه</span>

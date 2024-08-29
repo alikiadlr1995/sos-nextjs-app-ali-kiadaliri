@@ -7,9 +7,11 @@ const BlogItem = () => {
   const router = useRouter();
   const id = router.query.id || 0;
   
+  
 
   // fetch simulation
   const blog = blogs[Number(id)];
+  
   return (
     <div>
       <span>{blog.title}</span>

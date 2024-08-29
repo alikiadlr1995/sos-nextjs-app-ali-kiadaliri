@@ -4,6 +4,7 @@ import { StaticImageData } from "next/image";
 import BlogItem from "./BlogItem";
 import TodoList from "./components/TodoList";
 import MainLayout from "./components/mainLayout";
+import { Button } from "@mui/material";
 
 export type BlogType = {
   title: string;
@@ -20,31 +21,31 @@ export const blogs: BlogType[] = [
     image: Image1,
     createdAT: "02/10/2024",
     text: "text1",
+    id: "0",
+    fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
+  },
+  {
+    title: "title2",
+    image: Image1,
+    createdAT: "02/10/2024 05:44 AM",
+    text: "text2",
     id: "1",
     fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
   },
   {
-    title: "title1",
+    title: "title3",
     image: Image1,
-    createdAT: "02/10/2024 05:44 AM",
-    text: "text1",
+    createdAT: "02/10/2024",
+    text: "text3",
     id: "2",
     fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
   },
   {
-    title: "title1",
+    title: "title4",
     image: Image1,
     createdAT: "02/10/2024",
-    text: "text1",
+    text: "text4",
     id: "3",
-    fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
-  },
-  {
-    title: "title1",
-    image: Image1,
-    createdAT: "02/10/2024",
-    text: "text1",
-    id: "4",
     fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
   },
 ];
@@ -57,6 +58,9 @@ const HomePage = () => {
           {blogs.map((blogItem, index) => (
             <BlogItem key={index} blog={blogItem} />
           ))}
+          <div className="hidden max-sm:grid">
+            <Button variant="contained">بیشتر</Button>
+          </div>
           {/* <TodoList /> */}
         </div>
       </MainLayout>
