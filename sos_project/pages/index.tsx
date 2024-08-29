@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Image1 from "../assets/images/Media.png";
 import { StaticImageData } from "next/image";
 import BlogItem from "./BlogItem";
-import TodoList from "./components/TodoList";
 import MainLayout from "./components/mainLayout";
 import { Button } from "@mui/material";
 
@@ -51,17 +50,22 @@ export const blogs: BlogType[] = [
 ];
 
 const HomePage = () => {
+  const [showAll, setShowAll] = useState(false);
+  const handleSowAll = () => {
+    setShowAll(!showAll);
+  };
   return (
     <div className="w-full">
       <MainLayout>
-        <div className="w-full grid grid-cols-4 gap-2 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 pt-[86px]">
-          {blogs.map((blogItem, index) => (
+        <div className="w-full grid grid-cols-4 gap-2 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 pt-[86px] bg-[#fff]">
+          {blogs.slice(0,showAll ? blogs.length : 4).map((blogItem, index) => (
             <BlogItem key={index} blog={blogItem} />
           ))}
-          <div className="hidden max-sm:grid">
-            <Button variant="contained">بیشتر</Button>
+          <div className="sm:hidden sticky bottom-0 bg-[#fff] flex justify-center align-bottom">
+            <Button variant="outlined" onClick={handleSowAll}>
+              {showAll ? "کمتر" : "بیشتر"}
+            </Button>
           </div>
-          {/* <TodoList /> */}
         </div>
       </MainLayout>
     </div>
