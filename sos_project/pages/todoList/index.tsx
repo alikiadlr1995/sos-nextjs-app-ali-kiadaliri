@@ -38,7 +38,7 @@ const TodoList: React.FC = () => {
   };
 
   return (
-    <div>
+    <div dir="ltr">
       <div className="flex justify-center p-4 gap-4 h-screen w-full ">
         <div className="border-2 border-sky-500 rounded-md flex justify-center">
           <div className="w-[400px] flex flex-col p-4 gap-4">

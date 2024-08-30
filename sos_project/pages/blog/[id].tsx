@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { blogs } from "..";
+import Image from "next/image";
 
 
 const BlogItem = () => {
@@ -13,8 +14,9 @@ const BlogItem = () => {
   const blog = blogs[Number(id)];
   
   return (
-    <div>
+    <div className="w-full flex flex-col gap-6 items-center">
       <span>{blog.title}</span>
+      <Image src={blog.image} alt={blog.title}/>
       <span>{blog.fullText}</span>
     </div>
   );
