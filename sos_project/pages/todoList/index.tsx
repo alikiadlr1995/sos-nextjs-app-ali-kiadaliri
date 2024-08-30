@@ -1,7 +1,6 @@
 // components/TodoList.tsx
 import { Button, TextField } from "@mui/material";
 import React, { useState } from "react";
-import MainLayout from "../components/mainLayout";
 import DeleteIcon from '@mui/icons-material/Delete';
 
 interface Todo {
@@ -39,7 +38,7 @@ const TodoList: React.FC = () => {
   };
 
   return (
-    <MainLayout>
+    <div>
       <div className="flex justify-center p-4 gap-4 h-screen w-full ">
         <div className="border-2 border-sky-500 rounded-md flex justify-center">
           <div className="w-[400px] flex flex-col p-4 gap-4">
@@ -77,7 +76,7 @@ const TodoList: React.FC = () => {
           </div>
         </div>
       </div>
-    </MainLayout>
+    </div>
   );
 };
 

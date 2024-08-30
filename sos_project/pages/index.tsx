@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Image1 from "../assets/images/Media.png";
 import { StaticImageData } from "next/image";
 import BlogItem from "./BlogItem";
-import MainLayout from "./components/mainLayout";
 import { Button } from "@mui/material";
 
 export type BlogType = {
@@ -16,7 +15,7 @@ export type BlogType = {
 
 export const blogs: BlogType[] = [
   {
-    title: "title1",
+    title: "راهنمای دریافت معرفی‌نامه",
     image: Image1,
     createdAT: "02/10/2024",
     text: "text1",
@@ -24,7 +23,7 @@ export const blogs: BlogType[] = [
     fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
   },
   {
-    title: "title2",
+    title: "راهنمای دریافت معرفی‌نامه",
     image: Image1,
     createdAT: "02/10/2024 05:44 AM",
     text: "text2",
@@ -32,7 +31,7 @@ export const blogs: BlogType[] = [
     fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
   },
   {
-    title: "title3",
+    title: "راهنمای دریافت معرفی‌نامه",
     image: Image1,
     createdAT: "02/10/2024",
     text: "text3",
@@ -40,34 +39,116 @@ export const blogs: BlogType[] = [
     fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
   },
   {
-    title: "title4",
+    title: "راهنمای دریافت معرفی‌نامه",
     image: Image1,
     createdAT: "02/10/2024",
     text: "text4",
     id: "3",
     fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
   },
+  {
+    title: "راهنمای دریافت معرفی‌نامه",
+    image: Image1,
+    createdAT: "02/10/2024",
+    text: "text4",
+    id: "4",
+    fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
+  },
+  {
+    title: "راهنمای دریافت معرفی‌نامه",
+    image: Image1,
+    createdAT: "02/10/2024",
+    text: "text4",
+    id: "4",
+    fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
+  },
+  {
+    title: "راهنمای دریافت معرفی‌نامه",
+    image: Image1,
+    createdAT: "02/10/2024",
+    text: "text4",
+    id: "5",
+    fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
+  },
+  {
+    title: "راهنمای دریافت معرفی‌نامه",
+    image: Image1,
+    createdAT: "02/10/2024",
+    text: "text4",
+    id: "6",
+    fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
+  },
+  {
+    title: "راهنمای دریافت معرفی‌نامه",
+    image: Image1,
+    createdAT: "02/10/2024",
+    text: "text4",
+    id: "5",
+    fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
+  },
+  {
+    title: "راهنمای دریافت معرفی‌نامه",
+    image: Image1,
+    createdAT: "02/10/2024",
+    text: "text4",
+    id: "6",
+    fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
+  },
+  {
+    title: "راهنمای دریافت معرفی‌نامه",
+    image: Image1,
+    createdAT: "02/10/2024",
+    text: "text4",
+    id: "5",
+    fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
+  },
+  {
+    title: "راهنمای دریافت معرفی‌نامه",
+    image: Image1,
+    createdAT: "02/10/2024",
+    text: "text4",
+    id: "6",
+    fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
+  },
+  {
+    title: "راهنمای دریافت معرفی‌نامه",
+    image: Image1,
+    createdAT: "02/10/2024",
+    text: "text4",
+    id: "5",
+    fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
+  },
+  {
+    title: "راهنمای دریافت معرفی‌نامه",
+    image: Image1,
+    createdAT: "02/10/2024",
+    text: "text4",
+    id: "6",
+    fullText: "hgfukhlkjghgvhvjhffjhvjgfcdhfkhgfgjkhjhfhjcjghh",
+  },
 ];
 
 const HomePage = () => {
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(true);
   const handleSowAll = () => {
     setShowAll(!showAll);
   };
   return (
-    <div className="w-full">
-      <MainLayout>
-        <div className="w-full grid grid-cols-4 gap-2 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 pt-[86px] bg-[#fff]">
-          {blogs.slice(0,showAll ? blogs.length : 4).map((blogItem, index) => (
-            <BlogItem key={index} blog={blogItem} />
-          ))}
-          <div className="sm:hidden sticky bottom-0 bg-[#fff] flex justify-center align-bottom">
-            <Button variant="outlined" onClick={handleSowAll}>
-              {showAll ? "کمتر" : "بیشتر"}
-            </Button>
-          </div>
+    <div>
+      <div className="flex flex-row justify-between items-center w-full pt-[72px] pb-4">
+        <span className="text-2xl font-medium">مقاله ها</span>
+        <Button variant="text">نمایش همه</Button>
+      </div>
+      <div className="w-full grid grid-cols-4 gap-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 bg-white">
+        {blogs.slice(0, showAll ? blogs.length : 4).map((blogItem, index) => (
+          <BlogItem key={index} blog={blogItem} />
+        ))}
+        <div className="sm:hidden sticky bottom-0 bg-[#fff] flex justify-center align-bottom">
+          <Button variant="outlined" onClick={handleSowAll}>
+            {showAll ? "کمتر" : "بیشتر"}
+          </Button>
         </div>
-      </MainLayout>
+      </div>
     </div>
   );
 };
